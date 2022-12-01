@@ -1,0 +1,130 @@
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --Dark-gray: hsl(0, 0%, 59%);
+
+    --body-bg: var(--Dark-cyan);
+    --main-bg: #fff;
+
+    --color-paragraph: var(--Dark-grayish-blue);
+    --color-bold-paragraph: var(--Very-dark-blue);
+
+    --font-family: 'Kumbh Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100vh;
+}
+html {
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--body-bg);
+    /* centered */
+    display: grid;
+    place-items: center;
+}
+body::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position: -50rem -40rem;
+}
+body::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: 10rem 10rem;
+    z-index: -1;
+}
+@media (min-width: 1024px) {
+    body::before {
+        background-position: -30rem -35rem;
+    }
+    body::after {
+        background-position: 25rem 20rem;
+    }
+}
+@media (min-width: 1440px) {
+    body::before {
+        background-position: -15rem -25rem;
+    }
+    body::after {
+        background-position: 40rem 30rem;
+    }
+}
+main {
+    max-width: 350px;
+    position: relative;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+p {
+    overflow-wrap: break-word;
+    color: var(--color-paragraph);
+    font-weight: var(--fw-regular);
+    text-align: center;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.flex-space {
+    justify-content: space-around;
+}
+.bold {
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+    color: var(--color-bold-paragraph);
+}
+.card {
+    position: relative;
+    background-color: var(--main-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--Dark-gray);
+}
+.profile img {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid var(--main-bg);
+    left: 34%;
+    top: -20%;
+}
+.profile .flex {
+    margin-top: 60px;
+    padding: 5px;
+}
+.stats {
+    padding: 20px;
+}
