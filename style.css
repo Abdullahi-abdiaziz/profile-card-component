@@ -59,10 +59,10 @@ body::after {
 }
 @media (min-width: 1024px) {
     body::before {
-        background-position: -30rem -35rem;
+        background-position: -25rem -35rem;
     }
     body::after {
-        background-position: 25rem 20rem;
+        background-position: 30rem 25rem;
     }
 }
 @media (min-width: 1440px) {
